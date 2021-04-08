@@ -21,7 +21,7 @@
     "publish": "npm publish"
   },
   "author": "洪少利",
-  "license": "ISC",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/hsl947/eslint-plugin-hsl.git"
