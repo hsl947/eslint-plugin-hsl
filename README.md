@@ -5,7 +5,7 @@ ESLint-plugin-Hsl
 
 > 自定义的一套 ESlint 规则，包括 Vue, React，完善中...
 
-# Installation
+# 🔨 Installation
 
 Install [ESLint](https://www.github.com/eslint/eslint) either locally or globally. (Note that locally, per project, is strongly preferred)
 
@@ -19,7 +19,7 @@ If you installed `ESLint` globally, you have to install React plugin globally to
 $ npm install eslint-plugin-hsl --save-dev
 ```
 
-# Configuration
+# ⚙️ Configuration
 
 Configure in the Vue project:
 
@@ -51,7 +51,29 @@ Add "`hsl`" to the plugins section.
 }
 ```
 
-# License
+# ❓ FAQ
+
+### What is the "Use the latest vue-eslint-parser" error?
+
+The most rules of `eslint-plugin-vue` require `vue-eslint-parser` to check `<template>` ASTs.
+
+Make sure you have one of the following settings in your **.eslintrc**:
+
+*   `"extends": ["plugin:vue/recommended"]`
+*   `"extends": ["plugin:vue/base"]`
+
+If you already use other parser (e.g. `"parser": "babel-eslint"`), please move it into `parserOptions`, so it doesn't collide with the `vue-eslint-parser` used by this plugin's configuration:
+
+```
+- "parser": "babel-eslint",
+  "parserOptions": {
++     "parser": "babel-eslint",
+      "ecmaVersion": 2017,
+      "sourceType": "module"
+  }
+```
+
+# 🔑 License
 
 ESLint-plugin-Hsl is licensed under the [MIT License](http://www.opensource.org/licenses/mit-license.php).
 
