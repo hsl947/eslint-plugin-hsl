@@ -3,7 +3,7 @@ ESLint-plugin-Hsl
 
 [![Maintenance Status][status-image]][status-url] [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][deps-image]][deps-url] [![Coverage Status][coverage-image]][coverage-url] [![Code Climate][climate-image]][climate-url] [![Tidelift][tidelift-image]][tidelift-url]
 
-> 自定义的一套 ESlint 规则，包括 Vue, React，完善中...
+> 自定义的一套 ESlint 规则，包括 Vue, React，TypeScript，完善中...
 
 # Installation
 
@@ -36,6 +36,15 @@ Configure in the React project:
   "extends": [
     "eslint:recommended",
     "plugin:hsl/react"
+  ]
+```
+
+Configure in the TypeScript project:
+
+```json
+  "extends": [
+    "eslint:recommended",
+    "plugin:hsl/typescript"
   ]
 ```
 
