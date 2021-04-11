@@ -34,7 +34,7 @@ module.exports = {
   ],
   // 规则配置
   "rules": {
-    "indent": [1, "tab"],
+    "indent": [1, "tab"], // 默认缩进 1 tab
     "semi": [1, "never"], //不强制使用分号
     "quotes": [2, "single"], //单引号
     "no-console": 0, //不禁用console
@@ -63,6 +63,17 @@ module.exports = {
     "no-undef": 2, //不能有未定义的变量
     "no-use-before-define": [2, { "functions": false }], //未定义前不能使用
     "camelcase": 0, //强制驼峰法命名
+    "no-extra-boolean-cast": 0, //禁止不必要的bool转换
+    "no-unreachable": 1, //不能有无法执行的代码
+    "comma-dangle": 2, //对象字面量项尾不能有逗号
+    "no-mixed-spaces-and-tabs": 0, //禁止混用tab和空格
+    "prefer-arrow-callback": 0, //比较喜欢箭头回调
+    "arrow-parens": 0, //箭头函数用小括号括起来
+    "arrow-spacing": 0, //=>的前/后括号
+    "no-multiple-empty-lines": [1, {"max": 1}],//空行最多不能超过2行
+    "import/no-unresolved": 0,
+    "default-param-last": 0, // 函数有默认值的参数必须在最后
+    "eqeqeq": [ "warn", "always", {  "null": "ignore" } ], // 不强制使用 ===，仅警告
     "jsx-quotes": [2, "prefer-double"], //强制在JSX属性（jsx-quotes）中一致使用双引号
     "jsx-a11y/no-static-element-interactions": 0, // 关闭非交互元素加事件必须加 role
     "jsx-a11y/click-events-have-key-events": 0, // 关闭click事件要求有对应键盘事件
@@ -104,22 +115,10 @@ module.exports = {
     "react-hooks/exhaustive-deps": 1, // 检查 effect 的依赖
     "react/jsx-one-expression-per-line": 0, // 关闭要求一个表达式必须换行的要求，和Prettier冲突了
     "react/jsx-wrap-multilines": 0, // 关闭要求jsx属性中写jsx必须要加括号，和Prettier冲突了
-    "react/jsx-first-prop-new-line": [1, "multiline-multiprop"],
-    "react/prefer-stateless-function": [0, { "ignorePureComponents": true }],
-    "react/jsx-props-no-spreading": 0,
-    "react/destructuring-assignment": [1, "always", { "ignoreClassFields": false }],
-    "no-extra-boolean-cast": 0, //禁止不必要的bool转换
-    "no-unreachable": 1, //不能有无法执行的代码
-    "comma-dangle": 2, //对象字面量项尾不能有逗号
-    "no-mixed-spaces-and-tabs": 0, //禁止混用tab和空格
-    "prefer-arrow-callback": 0, //比较喜欢箭头回调
-    "arrow-parens": 0, //箭头函数用小括号括起来
-    "arrow-spacing": 0, //=>的前/后括号
-    "no-multiple-empty-lines": [1, {"max": 1}],//空行最多不能超过2行
-    "import/no-unresolved": 0,
-    "default-param-last": 0,
-    "no-bitwise":0, // 不让用位操作符，不知道为啥，先关掉
-    "eqeqeq": [ "warn", "always", {  "null": "ignore" } ]
+    "react/jsx-first-prop-new-line": [1, "multiline-multiprop"], // 确保第一个属性在JSX中的正确位置
+    "react/prefer-stateless-function": [0, { "ignorePureComponents": true }], // 优先使用无状态函数
+    "react/jsx-props-no-spreading": 0, // Prevent JSX prop spreading
+    "react/destructuring-assignment": [1, "always", { "ignoreClassFields": false }] // 需要解构参数使用
   },
   "settings": {
     "import/ignore": [
