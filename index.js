@@ -7,7 +7,7 @@ const RULES_TYPESCRIPT = require('./rules/typescript');
 module.exports = {
   configs: {
     vue: RULES_VUE,
-    react: RULES_REACT
+    react: RULES_REACT,
     typescript: RULES_TYPESCRIPT
   }
 };
